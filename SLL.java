@@ -15,16 +15,11 @@ class SLL{
         this.head = null;
         this.tail = null;
     }
-    public Node insertFirst(Node head , int data){
-        Node newNode = new Node(data);
-        if(head == null){
-            head = newNode;
-            tail = newNode;
-        }else{
-            newNode.next = head;
-            head = newNode;
-        }
-        size++;
+    public Node insertAtFront(Node head, int x) {
+        // code here
+        Node newnode = new Node(x);
+            newnode.next = head;
+            head = newnode;
         return head;
     }
 }
