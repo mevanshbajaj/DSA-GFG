@@ -37,23 +37,22 @@ class SLL{
         temp.next = newnode;
         return head;
     }
-    public Node insertatpos(Node head, int pos, int x) {
+    public void insertatpos(Node head, int pos, int x) {
         // code here
-        Node newnode = new Node(x);
         if(pos == 1){
-            newnode.next = head;
-            head = newnode;
-            return head;
+            insertAtFront(head, x);
+            return;
         }
+        if(pos == size+1) {
+            insertAtEnd(head, x);
+            return;
+        }
+        Node newnode = new Node(x);
         Node temp = head;
-        for(int i=1; i<pos-1 && temp != null; i++){
+        for(int i = 1; i < pos-1; i++){
             temp = temp.next;
-        }
-        if(temp == null){
-            return head; // position is greater than the length of the list
         }
         newnode.next = temp.next;
         temp.next = newnode;
-        return head;
     }
 }
