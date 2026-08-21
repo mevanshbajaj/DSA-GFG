@@ -37,4 +37,23 @@ class SLL{
         temp.next = newnode;
         return head;
     }
+    public Node insertatpos(Node head, int pos, int x) {
+        // code here
+        Node newnode = new Node(x);
+        if(pos == 1){
+            newnode.next = head;
+            head = newnode;
+            return head;
+        }
+        Node temp = head;
+        for(int i=1; i<pos-1 && temp != null; i++){
+            temp = temp.next;
+        }
+        if(temp == null){
+            return head; // position is greater than the length of the list
+        }
+        newnode.next = temp.next;
+        temp.next = newnode;
+        return head;
+    }
 }
