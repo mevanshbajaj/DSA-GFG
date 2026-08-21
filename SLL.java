@@ -22,4 +22,19 @@ class SLL{
             head = newnode;
         return head;
     }
+
+    public Node insertAtEnd(Node head, int x) { // without tail
+        // code here
+        Node newnode = new Node(x);
+        if(head == null){
+            head = newnode;
+            return head;
+        }
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = newnode;
+        return head;
+    }
 }
