@@ -1,12 +1,15 @@
 class Solution:
     def fizzBuzz(self, n : int):
         # code here
-        for i in range(1, n + 1):
-            if i % 3 == 0 and i % 5 == 0:
-                print("FizzBuzz", end = " ")
-            elif i % 3 == 0:
-                print("Fizz", end = " ")
-            elif i % 5 == 0:
-                print("Buzz", end = " ")
+        ans = []
+        for i in range(1,n+1):
+            if i%3==0 and i%5==0:
+                ans.append("FizzBuzz")
+            elif i%3==0:
+                ans.append("Fizz")
+            elif i%5==0:
+                ans.append("Buzz")
             else:
-                print(i, end = " ")
+                ans.append(str(i))
+        return ans
+        
