@@ -1,15 +1,7 @@
-import java.util.Scanner;
+a = int(input())
+b = int(input())
+c = int(input())
 
-class GFG {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-
-        // code here
-        int x = Math.max(a,Math.max(b,c));
-        System.out.print(x);
-    }
-}
+# code here
+x = max(a,b,c)
+print(x)
