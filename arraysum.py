@@ -1,8 +1,8 @@
-class Solution {
-    public int arraySum(int arr[]) {
-        // code here
-        int sum= 0;
-        for(int a  : arr) sum += a;
-        return sum;
-    }
-}
+class Solution:
+    def arraySum(self, arr):
+        # code here
+        sum = 0
+        for i in arr:
+            sum += i
+
+        return sum
